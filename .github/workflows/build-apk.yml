@@ -22,6 +22,14 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install web dependencies
+        run: npm install --no-audit --no-fund
+
       # 🔧 Option A (recommended): upgrade the action and skip default packages
       - name: Setup Android SDK
         uses: android-actions/setup-android@v3

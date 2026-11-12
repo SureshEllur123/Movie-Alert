@@ -60,17 +60,21 @@ eas build -p android --profile preview
 
 ### Prerequisites
 - JDK 17+ installed.
+- Node.js 22+ and npm dependencies installed from the repository root.
 - Android Studio Ladybug+ or Android SDK command line tools.
 
 ### Building via Terminal
 ```bash
-# 1. Navigate to the android folder
+# 1. Install the web application dependencies from the repository root
+npm install
+
+# 2. Navigate to the android folder
 cd android
 
-# 2. Ensure gradlew is executable
+# 3. Ensure gradlew is executable
 chmod +x gradlew
 
-# 3. Assemble Release APK
+# 4. Assemble Release APK (Gradle builds and bundles the web UI)
 ./gradlew assembleRelease
 ```
 
