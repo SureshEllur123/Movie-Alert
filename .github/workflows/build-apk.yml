@@ -22,8 +22,17 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
+      # 🔧 Option A (recommended): upgrade the action and skip default packages
       - name: Setup Android SDK
         uses: android-actions/setup-android@v3
+        with:
+          packages: ''            # don't try to install the removed 'tools' package
+          # log-accepted-android-sdk-licenses: false   # (optional, silences license noise)
+
+      # 🔧 Safety net: forcibly accept licenses non-interactively
+      - name: Accept Android SDK Licenses
+        run: |
+          yes | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" --licenses > /dev/null || true
 
       - name: Grant Execute Permission to Gradle Wrapper
         working-directory: android
