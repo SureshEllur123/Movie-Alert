@@ -19,7 +19,7 @@ Cinema Alert is a zero-budget, 100% offline-first Android application designed t
 
 ### Prerequisites
 1. Android Studio Ladybug (or higher) / Android SDK 34+.
-2. JDK 17+.
+2. JDK 17 (AGP 8.2.x and Gradle 8.7 are tested against Java 17; newer JDKs like Java 25 can fail during Gradle/KAPT startup).
 
 ### Building Release APK via Command Line
 ```bash
