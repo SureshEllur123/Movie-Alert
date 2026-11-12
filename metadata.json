@@ -1,0 +1,6 @@
+{
+  "name": "Cinema Alert",
+  "description": "Never miss the show. Never miss the seat. Live movie show release and seat availability monitoring for BookMyShow and District.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
